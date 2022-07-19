@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Botão</title>
 </head>
+
 <body>
-    <button type="button" onclick="Evento()">Botão normal</button>
+    <input id="botao" type="button" value="Botão Normal" onclick="mudarCor()" />
+
     <script>
-        function Evento(){
-           alert('evento funcionando')
+        function mudarCor() {
+            botao.style.background = 'green';
+            botao.style.color = 'red';
+            botao.value = "Botão Verde";
         }
     </script>
+
 </body>
+
 </html>
