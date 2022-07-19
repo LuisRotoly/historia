@@ -6,10 +6,14 @@
     <title>Botão</title>
 </head>
 <body>
-    <button type="button" onclick="Evento()">Botão normal</button>
+    <input id="botao" type="button" value="Botão Normal" onclick="mudarCarregando()" />
     <script>
-        function Evento(){
-           alert('evento funcionando')
+        function mudarCarregando() {
+            botao.style.display = "none"; 
+            var imagem = document.createElement("img");
+            imagem.src = "carregando.gif";
+            imagem.style.width = "100px";
+            document.body.appendChild(imagem);
         }
     </script>
 </body>
