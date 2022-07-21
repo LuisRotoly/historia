@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <title>Botão</title>
 </head>
-
 <body>
-    <input id="botao" type="button" value="Botão Normal" onclick="mudarCor()" />
-
+    <input id="botao" type="button" value="Botão Normal" onclick="mudarCarregando()" />
     <script>
+        var imagem = document.createElement("img");
+        imagem.src = "carregando.gif";
+        imagem.style.width = "100px";
+
+        function mudarCarregando() {
+            botao.style.display = "none";
+            document.body.appendChild(imagem);
+            setTimeout(mudarCor, 500);
+        }
+        
         function mudarCor() {
+            document.body.removeChild(imagem);
+            botao.style.display = "block";
             botao.style.background = 'red';
             botao.style.color = 'blue';
-            botao.value = "Botão Verde";
+            botao.value = "Botão Vermelho";
         }
     </script>
-
 </body>
-
-</html>
